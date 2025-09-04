@@ -1,0 +1,1 @@
+Fase 1: MCP, Fase 2: Agentes, Fase 3: UI

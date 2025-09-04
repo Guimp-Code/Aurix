@@ -1,0 +1,3 @@
+https://doc.qt.io/qtforpython/
+https://mcp.dev/
+https://example.com/hybrid

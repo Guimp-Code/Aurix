@@ -1,0 +1,1 @@
+Teste do sistema híbrido

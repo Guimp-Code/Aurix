@@ -1,0 +1,15 @@
+servers:
+  fs-aurix:
+    command: ["npx", "-y", "@modelcontextprotocol/server-filesystem", "$HOME/aurix"]
+  fs-context:
+    command: ["npx", "-y", "@modelcontextprotocol/server-filesystem", "$HOME/aurix-context"]
+
+  http:
+    command: ["python3", "$HOME/aurix/app/mcp/http_server.py"]
+
+  sqlite:
+    command: ["/home/guilherme/.nvm/versions/node/v18.20.8/bin/mcp-server-sqlite-npx", "$HOME/aurix/data/demo.sqlite"]
+
+  git:
+    # Preferir uvx; fallback para 'mcp-server-git' se uvx indisponível
+    command: ["uvx", "mcp-server-git", "--repository", "$HOME/aurix"]

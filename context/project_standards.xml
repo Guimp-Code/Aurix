@@ -1,0 +1,86 @@
+<projectStandards>
+  <objective>Impedir quebra de código, padronizar desenvolvimento e garantir prontidão de produção.</objective>
+  <scope>Todos os projetos e tasks executados pelos agentes AURIX.</scope>
+
+  <checklist>
+    <item>ADR aprovado + diagrama atualizado</item>
+    <item>Segurança ASVS L2 atendido</item>
+    <item>Cobertura ≥ 75%</item>
+    <item>Logs estruturados + métricas RED/USE</item>
+    <item>Production Readiness Checklist OK</item>
+    <item>README + CHANGELOG atualizados</item>
+    <item>PR revisado (mínimo 1 approver senior)</item>
+    <item>Versão SemVer + rollback documentado</item>
+  </checklist>
+
+  <principles>
+    <principle>12-Factor App</principle>
+    <principle>SOLID / Clean Code</principle>
+    <principle>Trunk-Based + Conventional Commits</principle>
+    <principle>Infra como Código</principle>
+    <principle>Segurança by design</principle>
+    <principle>SRE: SLI/SLO + error budget</principle>
+  </principles>
+
+  <structure>
+    <folder>/src/core</folder>
+    <folder>/src/adapters</folder>
+    <folder>/src/infra</folder>
+    <folder>/src/tests</folder>
+    <folder>/docs</folder>
+    <file>README.md</file>
+    <file>CHANGELOG.md</file>
+  </structure>
+
+  <security>
+    <baseline>ASVS Level 2</baseline>
+    <scan>Dependências (SCA)</scan>
+    <scan>Secrets (scanner CI)</scan>
+    <rule>Princípio do menor privilégio</rule>
+    <rule>TLS obrigatório</rule>
+    <rule>Proteção CSRF/XSS/SSRF</rule>
+  </security>
+
+  <observability>
+    <logs>JSON estruturado</logs>
+    <metrics>RED/USE</metrics>
+    <tracing>Spans em chamadas externas</tracing>
+    <alerts>Baseados em SLO</alerts>
+  </observability>
+
+  <responsibilities>
+    <architect>
+      <role>Owner dos padrões</role>
+      <duty>Carregar project_standards.xml antes de planejar tasks</duty>
+    </architect>
+    <manager>
+      <role>Gate de compliance</role>
+      <duty>Bloquear pipeline se checklist falhar</duty>
+    </manager>
+    <devBuilder>
+      <role>Executor</role>
+      <duty>Implementar apenas com ADR + checklist aprovado</duty>
+    </devBuilder>
+    <qaTester>
+      <role>Validador</role>
+      <duty>Rodar testes, lint, cobertura, segurança</duty>
+    </qaTester>
+    <packager>
+      <role>Release Engineer</role>
+      <duty>Validar SemVer, rollback, reprodutibilidade</duty>
+    </packager>
+  </responsibilities>
+
+  <sources>
+    <link>https://github.com/donnemartin/system-design-primer</link>
+    <link>https://github.com/binhnguyennus/awesome-scalability</link>
+    <link>https://github.com/OWASP/CheatSheetSeries</link>
+    <link>https://github.com/OWASP/ASVS</link>
+    <link>https://github.com/devsecops/awesome-devsecops</link>
+    <link>https://github.com/mercari/production-readiness-checklist</link>
+    <link>https://github.com/dastergon/awesome-sre</link>
+    <link>https://github.com/google/eng-practices</link>
+    <link>https://github.com/adriannovegil/awesome-observability</link>
+  </sources>
+
+</projectStandards>

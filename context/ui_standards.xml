@@ -1,0 +1,48 @@
+<uiStandards>
+  <objective>Garantir consistência visual, responsividade e acessibilidade em todas as interfaces desenvolvidas pelo Aurix Framework.</objective>
+  <scope>Aplicável a todas as tasks de frontend criadas pelo agente Dev.UI Engineer.</scope>
+
+  <checklist>
+    <item>UI responsiva (mobile-first, breakpoints definidos)</item>
+    <item>Design System aplicado (tokens de cor, tipografia, espaçamento)</item>
+    <item>Acessibilidade (WCAG 2.1 AA, ARIA)</item>
+    <item>Componentes reutilizáveis documentados (Storybook ou equivalente)</item>
+    <item>Consistência entre telas e fluxos</item>
+    <item>Teste de UI (Jest, Testing Library, Cypress)</item>
+  </checklist>
+
+  <principles>
+    <principle>Design System centralizado</principle>
+    <principle>Atomic Design (atoms → molecules → organisms)</principle>
+    <principle>Responsividade mobile-first</principle>
+    <principle>Acessibilidade como requisito</principle>
+    <principle>Consistência com guidelines modernas (Material, Fluent, Human Interface)</principle>
+  </principles>
+
+  <responsibilities>
+    <devUIEngineer>
+      <role>Frontend Specialist</role>
+      <duty>Implementar interfaces responsivas e acessíveis</duty>
+      <duty>Garantir consistência com Design System</duty>
+      <duty>Produzir componentes reutilizáveis</duty>
+      <duty>Integrar com APIs fornecidas pelo Dev Builder</duty>
+    </devUIEngineer>
+    <qaTester>
+      <role>Validador UI</role>
+      <duty>Testar componentes visuais e interações</duty>
+    </qaTester>
+    <architect>
+      <role>Revisor UI</role>
+      <duty>Validar specs de UI/UX antes de repassar ao Dev.UI</duty>
+    </architect>
+  </responsibilities>
+
+  <sources>
+    <link>https://github.com/greatfrontend/awesome-front-end-system-design</link>
+    <link>https://github.com/mehdihadeli/awesome-software-architecture</link>
+    <link>https://github.com/DovAmir/awesome-design-patterns</link>
+    <link>https://gerroden.github.io/frontend-architecture-blueprint/</link>
+    <link>https://en.wikipedia.org/wiki/Design_system</link>
+  </sources>
+
+</uiStandards>
