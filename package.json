@@ -1,0 +1,28 @@
+{
+  "name": "@aurix/framework",
+  "version": "2.0.0",
+  "description": "Hybrid AI development framework with agents and MCP servers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "dev": "ts-node src/index.ts",
+    "cli": "ts-node cli.ts"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "openai": "^4.0.0",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.1",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "license": "MIT"
+}

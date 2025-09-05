@@ -1,0 +1,16 @@
+{
+  "id": "agent_delegation_history_1757112005560_3yi6qt5vb",
+  "projectId": "agent_delegation_history",
+  "data": "{\"delegations\":[{\"success\":true,\"data\":{\"architecture\":\"Microservices with API Gateway\",\"technologies\":[\"TypeScript\",\"Node.js\",\"React\"],\"plan\":\"Phase 1: Core API, Phase 2: Frontend, Phase 3: Integration\"},\"metadata\":{\"agent\":\"architect\",\"executionTime\":0,\"timestamp\":\"2025-09-05T22:40:05.559Z\"},\"delegation\":{\"fromAgent\":\"manager\",\"toAgent\":\"architect\",\"startTime\":\"2025-09-05T22:40:05.555Z\",\"endTime\":\"2025-09-05T22:40:05.559Z\",\"retryCount\":0}}]}",
+  "timestamp": "2025-09-05T22:40:05.560Z",
+  "version": 1,
+  "metadata": {
+    "tags": [
+      "agent",
+      "delegation_history"
+    ],
+    "size": 447,
+    "compressed": true,
+    "originalSize": 447
+  }
+}

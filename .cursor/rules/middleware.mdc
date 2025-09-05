@@ -1,0 +1,113 @@
+# Middleware Standards
+---
+description: Padrões de middleware para logging, autenticação e error handling
+globs: ["src/middleware/**", "src/agents/**"]
+alwaysApply: true
+priority: 1
+---
+
+## Middleware Architecture
+
+### 1. Core Middleware Interface
+```typescript
+interface Middleware<T = any> {
+  name: string;
+  priority: number;
+  execute: (context: MiddlewareContext<T>, next: NextFunction) => Promise<void>;
+}
+
+interface MiddlewareContext<T = any> {
+  request: T;
+  response?: any;
+  metadata: Record<string, any>;
+  agent?: string;
+  timestamp: Date;
+}
+
+type NextFunction = () => Promise<void>;
+```
+
+### 2. Built-in Middleware
+
+#### Authentication Middleware
+```typescript
+const authMiddleware: Middleware = {
+  name: 'auth',
+  priority: 1,
+  async execute(context, next) {
+    // Validate authentication
+    if (!context.metadata.user) {
+      throw new Error('Unauthorized');
+    }
+    await next();
+  }
+};
+```
+
+#### Logging Middleware
+```typescript
+const loggingMiddleware: Middleware = {
+  name: 'logging',
+  priority: 2,
+  async execute(context, next) {
+    const start = Date.now();
+    console.log(`[${context.agent}] Request:`, context.request);
+    
+    try {
+      await next();
+      console.log(`[${context.agent}] Success in ${Date.now() - start}ms`);
+    } catch (error) {
+      console.error(`[${context.agent}] Error in ${Date.now() - start}ms:`, error);
+      throw error;
+    }
+  }
+};
+```
+
+#### Error Handling Middleware
+```typescript
+const errorHandlingMiddleware: Middleware = {
+  name: 'errorHandler',
+  priority: 999,
+  async execute(context, next) {
+    try {
+      await next();
+    } catch (error) {
+      // Log error
+      console.error('Middleware error:', error);
+      
+      // Transform error for response
+      context.response = {
+        success: false,
+        error: error.message,
+        code: error.code || 'UNKNOWN_ERROR'
+      };
+    }
+  }
+};
+```
+
+### 3. Middleware Chain
+```typescript
+class MiddlewareChain {
+  private middlewares: Middleware[] = [];
+  
+  use(middleware: Middleware) {
+    this.middlewares.push(middleware);
+    this.middlewares.sort((a, b) => a.priority - b.priority);
+  }
+  
+  async execute<T>(context: MiddlewareContext<T>): Promise<void> {
+    let index = 0;
+    
+    const next = async (): Promise<void> => {
+      if (index < this.middlewares.length) {
+        const middleware = this.middlewares[index++];
+        await middleware.execute(context, next);
+      }
+    };
+    
+    await next();
+  }
+}
+```

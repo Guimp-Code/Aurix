@@ -1,0 +1,43 @@
+# Frontend Standards
+---
+description: Padrões para desenvolvimento frontend com Atomic Design e responsividade
+globs: ["src/components/**", "examples/**"]
+alwaysApply: true
+priority: 4
+---
+
+## Atomic Design Patterns
+
+### 1. Component Structure
+```typescript
+// Atoms - Elementos básicos
+interface ButtonProps {
+  variant: 'primary' | 'secondary' | 'danger';
+  size: 'sm' | 'md' | 'lg';
+  children: React.ReactNode;
+}
+
+// Molecules - Combinação de atoms
+interface FormFieldProps {
+  label: string;
+  input: React.ComponentType;
+  error?: string;
+}
+
+// Organisms - Combinação de molecules
+interface HeaderProps {
+  navigation: NavigationProps;
+  userMenu: UserMenuProps;
+}
+```
+
+### 2. Responsive Design
+- Use CSS Grid e Flexbox
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+
+### 3. Accessibility (WCAG 2.1 AA)
+- Sempre incluir aria-labels
+- Contraste mínimo 4.5:1
+- Navegação por teclado
+- Screen reader support

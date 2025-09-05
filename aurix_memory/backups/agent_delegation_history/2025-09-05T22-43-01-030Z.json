@@ -1,0 +1,16 @@
+{
+  "id": "agent_delegation_history_1757112181034_u04ixzwfu",
+  "projectId": "agent_delegation_history",
+  "data": "{\"delegations\":[{\"success\":false,\"data\":null,\"error\":\"Task validation failed for agent 'dev_builder'\",\"metadata\":{\"agent\":\"dev_builder\",\"executionTime\":0,\"timestamp\":\"2025-09-05T22:43:01.029Z\"},\"delegation\":{\"fromAgent\":\"task_manager\",\"toAgent\":\"dev_builder\",\"startTime\":\"2025-09-05T22:43:01.029Z\",\"endTime\":\"2025-09-05T22:43:01.029Z\",\"retryCount\":0}}]}",
+  "timestamp": "2025-09-05T22:43:01.030Z",
+  "version": 1,
+  "metadata": {
+    "tags": [
+      "agent",
+      "delegation_history"
+    ],
+    "size": 353,
+    "compressed": true,
+    "originalSize": 353
+  }
+}

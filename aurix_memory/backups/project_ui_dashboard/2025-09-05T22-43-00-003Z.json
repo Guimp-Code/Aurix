@@ -1,0 +1,15 @@
+{
+  "id": "project_ui_dashboard_1757112180009_a2jrain58",
+  "projectId": "project_ui_dashboard",
+  "data": "{\"architecture\":{\"architecture\":\"Microservices with API Gateway\",\"technologies\":[\"TypeScript\",\"Node.js\",\"React\"],\"plan\":\"Phase 1: Core API, Phase 2: Frontend, Phase 3: Integration\"},\"status\":\"planned\"}",
+  "timestamp": "2025-09-05T22:43:00.003Z",
+  "version": 1,
+  "metadata": {
+    "tags": [
+      "project"
+    ],
+    "size": 201,
+    "compressed": true,
+    "originalSize": 201
+  }
+}

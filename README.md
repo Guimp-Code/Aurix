@@ -1,86 +1,318 @@
-# Aurix
+# Aurix 2.0
 
-## 🚀 **Sistema de Desenvolvimento Híbrido com IA**
+🚀 **Hybrid AI development framework combining agents, MCP servers, and type-safety.**
 
-O **Aurix** é um framework avançado que combina múltiplos agentes de IA especializados com servidores MCP (Model Context Protocol) para criar um ambiente de desenvolvimento altamente produtivo e inteligente.
+## 🎯 Quick Start
 
-### **1. Tecnologias Principais:**
-- **Cursor AI**: Interface principal e orquestração
-- **Ollama NITRO**: Modelo local para reforço e offline
-- **MCP Servers**: Protocolo para comunicação entre agentes
-- **Templates**: Estruturas pré-definidas para projetos
+```bash
+# Clone repository
+git clone https://github.com/Guimp-Code/Aurix.git
+cd Aurix
 
-### **2. Agentes de Desenvolvimento:**
-- 🏗️ **Architect**: Análise, arquitetura e planejamento
-- 👨‍💻 **Dev Builder**: Implementação de código
-- 🎨 **Dev.UI Engineer**: Desenvolvimento frontend e UI/UX
-- 🤖 **LLM Architect**: Design de automações LLM e IA
-- 🔍 **QA Tester**: Validação e testes
-- 📦 **Packager**: Build e distribuição
-- 📋 **Manager**: Orquestração e compliance
+# Install dependencies
+npm install
 
-## 🏗️ **Arquitetura do Sistema**
+# Run example
+npm run dev -- examples/simple_ui_project.ts
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Cursor AI     │    │ Ollama NITRO    │    │  Templates      │
-│   (Principal)   │◄──►│   (Reforço)     │◄──►│   (Offline)     │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    Sistema de Agentes                          │
-│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐  │
-│  │Architect│ │Dev Build│ │Dev.UI   │ │LLM      │ │QA Tester│  │
-│  │         │ │         │ │Engineer │ │Architect│ │         │  │
-│  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘  │
-│                                                                 │
-│  ┌─────────┐ ┌─────────┐                                        │
-│  │Packager │ │ Manager │                                        │
-│  │         │ │         │                                        │
-│  └─────────┘ └─────────┘                                        │
-└─────────────────────────────────────────────────────────────────┘
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    MCP Servers                                 │
-│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐  │
-│  │  HTTP   │ │ SQLite  │ │   Git   │ │fs-aurix │ │fs-context│  │
-│  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘  │
-└─────────────────────────────────────────────────────────────────┘
+# Run tests
+npm test
+
+# Build framework
+npm run build
 ```
 
-## 🤖 **Agentes Especializados**
+## ✨ Key Features
 
-### **🎨 Dev.UI Engineer**
-- **Foco**: Desenvolvimento frontend e UI/UX profissional
-- **Recursos**: Atomic Design, Design Systems, WCAG 2.1 AA
-- **Padrões**: UI Standards XML, acessibilidade, responsividade
-- **Uso**: `dispatch_agent("dev_ui", {...})`
+- 🤖 **6 Specialized AI Agents**: Architect, Dev Builder, Dev.UI Engineer, LLM Architect, QA Tester, Manager
+- 🧠 **Intelligent Memory System**: Persistent storage with cache optimization and auto-cleanup
+- 🔄 **Advanced Task Delegation**: Priority queues, dependency resolution, and retry mechanisms
+- 📝 **Cursor AI Rules**: Specialized training rules for consistent development patterns
+- ⚡ **TypeScript Type-Safe**: End-to-end type safety without code generation
+- 🌐 **Universal Framework**: Works with any technology (React, Vue, Node.js, Python, etc.)
+- 💾 **Offline Support**: Full functionality without internet connection
+- 🔧 **Extensible Architecture**: Easy to add new agents or customize existing ones
 
-### **🤖 LLM Architect**
-- **Foco**: Design de automações LLM e sistemas de IA
-- **Recursos**: LLM Automation Standards, safety policies
-- **Padrões**: Enterprise-grade, observabilidade, compliance
-- **Uso**: `dispatch_agent("llm_architect", {...})`
+## 🏗️ Architecture
 
-### **📋 Manager**
-- **Foco**: Orquestração e compliance de projetos
-- **Recursos**: Separação docs_aurix vs docs do projeto
-- **Padrões**: Project Standards, estrutura organizacional
-- **Uso**: `dispatch_agent("manager", {...})`
+```
+aurix-2.0/
+├── .cursor/rules/           # AI training rules
+├── src/
+│   ├── agents/             # Agent system (executor, providers, types)
+│   ├── memory/             # Memory management (fs, manager, types)
+│   ├── delegation/         # Task delegation and management
+│   └── index.ts            # Main framework entry
+├── examples/               # Usage examples
+├── tests/                  # Unit tests with Jest
+└── docs/                   # Documentation
+```
 
-## 📚 **Documentação Detalhada**
+## 🤖 Agents Overview
 
-## 🌟 **Vantagens**
+### **🏛️ Architect Agent**
+- **Purpose**: Requirements analysis and architecture design
+- **Capabilities**: System design, technology selection, project planning
+- **Usage**: `executeTask('architect', { type: 'analyze_requirements', config: {...} })`
 
-1. **🔄 Universal**: Funciona com qualquer tecnologia
-2. **🚀 Produtivo**: Desenvolvimento automatizado
-3. **🧠 Inteligente**: IA híbrida (Cursor + Ollama)
-4. **⚡ Otimizado**: Ajuste automático de memória
-5. **🌐 Offline**: Funciona sem internet
-6. **🔧 Extensível**: Fácil adicionar novos agentes/MCPs
-7. **🔒 Enterprise**: PROJECT STANDARDS com compliance
-8. **🎨 UI/UX Especializado**: Dev.UI Engineer para frontend profissional
-9. **🤖 IA Avançada**: LLM Architect para automações inteligentes
-10. **📚 Padrões Separados**: Framework vs Projeto documentação
+### **⚒️ Dev Builder Agent**
+- **Purpose**: Code implementation and feature development
+- **Capabilities**: Code generation, refactoring, optimization
+- **Usage**: `executeTask('dev_builder', { type: 'implement_feature', config: {...} })`
+
+### **🎨 Dev.UI Engineer Agent**
+- **Purpose**: Frontend and UI/UX development
+- **Capabilities**: Component generation, responsive design, accessibility (WCAG 2.1 AA)
+- **Usage**: `executeTask('dev_ui', { type: 'generate_ui', config: {...} })`
+
+### **🧠 LLM Architect Agent**
+- **Purpose**: AI automation and prompt engineering
+- **Capabilities**: Workflow automation, prompt optimization, safety policies
+- **Usage**: `executeTask('llm_architect', { type: 'design_automation', config: {...} })`
+
+### **🧪 QA Tester Agent**
+- **Purpose**: Quality assurance and testing
+- **Capabilities**: Test generation, quality validation, performance analysis
+- **Usage**: `executeTask('qa_tester', { type: 'validate_quality', config: {...} })`
+
+### **👔 Manager Agent**
+- **Purpose**: Project coordination and compliance
+- **Capabilities**: Task orchestration, resource management, enterprise compliance
+- **Usage**: `executeTask('manager', { type: 'coordinate_project', config: {...} })`
+
+## 💡 Usage Examples
+
+### **Basic Agent Execution**
+```typescript
+import { AurixFramework } from '@aurix/framework';
+
+const aurix = new AurixFramework();
+
+// Execute single task
+const result = await aurix.executeTask('dev_ui', {
+  type: 'generate_ui',
+  config: {
+    template: 'atomic_design',
+    framework: 'react',
+    accessibility: true
+  }
+});
+
+console.log('UI Generated:', result.data);
+```
+
+### **Task Delegation**
+```typescript
+// Delegate task between agents
+const delegationResult = await aurix.delegateTask(
+  'architect',  // from agent
+  'dev_builder', // to agent
+  {
+    type: 'implement_feature',
+    config: { specification: 'User authentication system' }
+  }
+);
+```
+
+### **Chain Delegation (Pipeline)**
+```typescript
+const chainResult = await aurix.delegator.delegateChain([
+  {
+    agent: 'architect',
+    task: { type: 'design_architecture', config: { requirements: 'E-commerce API' } }
+  },
+  {
+    agent: 'dev_builder',
+    task: { type: 'implement_feature', config: { feature: 'product_catalog' } }
+  },
+  {
+    agent: 'qa_tester',
+    task: { type: 'validate_quality', config: { coverage: 90 } }
+  }
+]);
+```
+
+### **Task Management**
+```typescript
+// Add tasks to queue with priorities
+const taskId = aurix.addTask(
+  { type: 'optimize_performance', config: { target: 'api_response_time' } },
+  'dev_builder',
+  'high' // priority
+);
+
+// Tasks are automatically processed based on priority and dependencies
+```
+
+### **Memory Management**
+```typescript
+// Store project data
+await aurix.memory.setProjectMemory('my_project', {
+  architecture: 'microservices',
+  components: ['auth', 'catalog', 'orders'],
+  status: 'in_development'
+});
+
+// Retrieve project data
+const projectData = await aurix.memory.getProjectMemory('my_project');
+
+// Agent-specific memory
+await aurix.memory.setAgentMemory('dev_ui', {
+  preferences: { theme: 'dark', verbosity: 'detailed' },
+  executionHistory: [...]
+});
+```
+
+## 🎯 Cursor AI Rules
+
+Aurix 2.0 includes specialized training rules in `.cursor/rules/`:
+
+- **`frontend.mdc`**: Atomic Design, responsive patterns, accessibility
+- **`ux.mdc`**: Design systems, WCAG 2.1 AA, user experience patterns  
+- **`igniter-controllers.mdc`**: Type-safe controller patterns
+- **`middleware.mdc`**: Logging, authentication, error handling
+
+These rules automatically guide AI development to follow best practices.
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run with coverage
+npm test -- --coverage
+
+# Run specific test file
+npm test -- executor.test.ts
+
+# Watch mode
+npm test -- --watch
+```
+
+## 📊 Statistics & Monitoring
+
+```typescript
+const stats = aurix.getStats();
+
+console.log('Framework Statistics:', {
+  executor: stats.executor,     // Execution metrics
+  memory: stats.memory,         // Memory usage and hit rates
+  delegation: stats.delegation, // Delegation success rates
+  tasks: stats.tasks           // Task queue statistics
+});
+```
+
+## 🔧 Configuration
+
+```typescript
+const aurix = new AurixFramework({
+  memoryConfig: {
+    maxCacheSize: 100,
+    persistToDisk: true,
+    autoCleanup: true,
+    cleanupInterval: 30 * 60 * 1000 // 30 minutes
+  },
+  taskManagerConfig: {
+    maxConcurrentTasks: 5,
+    defaultTimeout: 30000,
+    enablePriorityQueue: true,
+    enableDependencyResolution: true
+  }
+});
+```
+
+## 🚀 Advanced Features
+
+### **Batch Processing**
+```typescript
+const results = await aurix.executor.executeBatch([
+  { agent: 'architect', task: { type: 'analyze_requirements', config: {} } },
+  { agent: 'dev_ui', task: { type: 'generate_ui', config: {} } },
+  { agent: 'qa_tester', task: { type: 'validate_quality', config: {} } }
+]);
+```
+
+### **Parallel Execution with Concurrency Control**
+```typescript
+const results = await aurix.executor.executeParallel(tasks, 3); // Max 3 concurrent
+```
+
+### **Memory Export/Import**
+```typescript
+// Export project memory
+const exported = await aurix.memory.exportMemory('project_id');
+
+// Import to another instance
+await aurix.memory.importMemory(exported);
+```
+
+### **Memory Optimization**
+```typescript
+const optimization = await aurix.memory.optimizeMemory();
+console.log(`Saved ${optimization.saved} duplicate entries`);
+```
+
+## 🏢 Enterprise Features
+
+- **Compliance**: Automatic enterprise standard enforcement
+- **Audit Trail**: Complete execution history and logging
+- **Resource Management**: Automatic memory and CPU optimization
+- **Security**: Input validation and output sanitization
+- **Scalability**: Horizontal scaling support with load balancing
+
+## 🔌 Extensibility
+
+### **Add Custom Agent**
+```typescript
+aurix.provider.registerAgent({
+  name: 'custom_agent',
+  execute: async (task) => {
+    // Your custom logic
+    return { success: true, data: 'Custom result' };
+  },
+  validate: (task) => task.type === 'custom_task'
+});
+```
+
+### **Add Custom Memory Type**
+```typescript
+await aurix.memory.setState({
+  projectId: 'custom_memory',
+  data: { customField: 'value' },
+  timestamp: new Date(),
+  version: 1,
+  metadata: { tags: ['custom'] }
+});
+```
+
+## 📈 Performance
+
+- **Memory Efficient**: Automatic cache management and cleanup
+- **Fast Execution**: Optimized agent routing and parallel processing
+- **Scalable**: Handles thousands of concurrent tasks
+- **Offline Ready**: Full functionality without internet dependency
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open Pull Request
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+- 📖 **Documentation**: [docs/](./docs/)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Guimp-Code/Aurix/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/Guimp-Code/Aurix/discussions)
+
+---
+
+**Built with ❤️ by the Aurix Team**
+
+*Empowering developers with intelligent automation since 2024*

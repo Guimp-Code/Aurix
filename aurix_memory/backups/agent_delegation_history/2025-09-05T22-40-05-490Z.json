@@ -1,0 +1,16 @@
+{
+  "id": "agent_delegation_history_1757112005490_u3tr84kbf",
+  "projectId": "agent_delegation_history",
+  "data": "{\"delegations\":[{\"success\":true,\"data\":{\"architecture\":\"Microservices with API Gateway\",\"technologies\":[\"TypeScript\",\"Node.js\",\"React\"],\"plan\":\"Phase 1: Core API, Phase 2: Frontend, Phase 3: Integration\"},\"metadata\":{\"agent\":\"architect\",\"executionTime\":0,\"timestamp\":\"2025-09-05T22:40:05.390Z\"},\"delegation\":{\"fromAgent\":\"manager\",\"toAgent\":\"architect\",\"startTime\":\"2025-09-05T22:40:05.374Z\",\"endTime\":\"2025-09-05T22:40:05.391Z\",\"retryCount\":0}},{\"success\":true,\"data\":{\"files\":[\"src/components/Button.tsx\",\"src/hooks/useAuth.ts\"],\"tests\":[\"tests/Button.test.tsx\",\"tests/useAuth.test.ts\"],\"documentation\":\"Component and hook documentation updated\"},\"metadata\":{\"agent\":\"dev_builder\",\"executionTime\":0,\"timestamp\":\"2025-09-05T22:40:05.489Z\"},\"delegation\":{\"fromAgent\":\"architect\",\"toAgent\":\"dev_builder\",\"startTime\":\"2025-09-05T22:40:05.483Z\",\"endTime\":\"2025-09-05T22:40:05.490Z\",\"retryCount\":0}}]}",
+  "timestamp": "2025-09-05T22:40:05.490Z",
+  "version": 1,
+  "metadata": {
+    "tags": [
+      "agent",
+      "delegation_history"
+    ],
+    "size": 897,
+    "compressed": true,
+    "originalSize": 897
+  }
+}

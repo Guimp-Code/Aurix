@@ -1,0 +1,68 @@
+# Igniter Controllers Pattern
+---
+description: Padrões de controllers para ações de agentes
+globs: ["src/agents/**", "src/controllers/**"]
+alwaysApply: true
+priority: 2
+---
+
+## Agent Controller Pattern
+
+### 1. Type-Safe Controllers
+```typescript
+interface AgentController<T = any> {
+  name: string;
+  execute: (input: T) => Promise<AgentResult>;
+  validate?: (input: T) => boolean;
+  middleware?: AgentMiddleware[];
+}
+
+// Example: UI Agent Controller
+class UIAgentController implements AgentController<UITaskInput> {
+  name = 'dev_ui';
+  
+  async execute(input: UITaskInput): Promise<AgentResult> {
+    // Validate input
+    if (!this.validate(input)) {
+      throw new Error('Invalid input');
+    }
+    
+    // Execute UI generation
+    const result = await this.generateUI(input);
+    
+    return {
+      success: true,
+      data: result,
+      metadata: { agent: this.name, timestamp: new Date() }
+    };
+  }
+  
+  validate(input: UITaskInput): boolean {
+    return input.template && input.config;
+  }
+}
+```
+
+### 2. Middleware Pattern
+```typescript
+interface AgentMiddleware {
+  name: string;
+  execute: (context: AgentContext, next: () => Promise<void>) => Promise<void>;
+}
+
+// Logging middleware
+const loggingMiddleware: AgentMiddleware = {
+  name: 'logging',
+  async execute(context, next) {
+    console.log(`[${context.agent}] Starting task:`, context.input);
+    await next();
+    console.log(`[${context.agent}] Task completed:`, context.result);
+  }
+};
+```
+
+### 3. Error Handling
+- Always use try/catch
+- Return structured errors
+- Log errors for debugging
+- Provide user-friendly messages

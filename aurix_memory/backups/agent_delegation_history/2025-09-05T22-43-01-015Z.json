@@ -1,0 +1,16 @@
+{
+  "id": "agent_delegation_history_1757112181024_1trc8lt2o",
+  "projectId": "agent_delegation_history",
+  "data": "{\"delegations\":[{\"success\":true,\"data\":{\"tests\":[\"Unit tests: 95% coverage\",\"Integration tests: 12 passed\"],\"quality\":\"Code quality score: A+\",\"performance\":\"Load time: 1.2s, Bundle size: 245KB\"},\"metadata\":{\"agent\":\"qa_tester\",\"executionTime\":0,\"timestamp\":\"2025-09-05T22:43:01.013Z\"},\"delegation\":{\"fromAgent\":\"task_manager\",\"toAgent\":\"qa_tester\",\"startTime\":\"2025-09-05T22:43:01.012Z\",\"endTime\":\"2025-09-05T22:43:01.014Z\",\"retryCount\":0}}]}",
+  "timestamp": "2025-09-05T22:43:01.015Z",
+  "version": 1,
+  "metadata": {
+    "tags": [
+      "agent",
+      "delegation_history"
+    ],
+    "size": 443,
+    "compressed": true,
+    "originalSize": 443
+  }
+}
