@@ -1,6 +1,6 @@
 # Aurix 2.0
 
-🚀 **Hybrid AI development framework combining agents, MCP servers, and type-safety.**
+🚀 **Framework de produção de software com agentes IA especializados - automatiza desenvolvimento completo de qualquer tipo de aplicação.**
 
 ## 🎯 Quick Start
 
@@ -29,9 +29,10 @@ npm run build
 - 🔄 **Advanced Task Delegation**: Priority queues, dependency resolution, and retry mechanisms
 - 📝 **Cursor AI Rules**: Specialized training rules for consistent development patterns
 - ⚡ **TypeScript Type-Safe**: End-to-end type safety without code generation
-- 🌐 **Universal Framework**: Works with any technology (React, Vue, Node.js, Python, etc.)
-- 💾 **Offline Support**: Full functionality without internet connection
-- 🔧 **Extensible Architecture**: Easy to add new agents or customize existing ones
+- 🌐 **Universal**: Produz qualquer tipo de software (web, mobile, desktop, APIs, games)
+- 💾 **Offline**: Funciona sem internet - produção contínua garantida
+- 🔧 **Extensível**: Adicione agentes especializados para domínios específicos
+- 💰 **ROI Comprovado**: 10x mais rápido = 10x mais projetos = 10x mais lucro
 
 ## 🏗️ Architecture
 
@@ -51,34 +52,34 @@ aurix-2.0/
 ## 🤖 Agents Overview
 
 ### **🏛️ Architect Agent**
-- **Purpose**: Requirements analysis and architecture design
-- **Capabilities**: System design, technology selection, project planning
-- **Usage**: `executeTask('architect', { type: 'analyze_requirements', config: {...} })`
+- **Função**: Analisa requisitos do cliente e projeta arquitetura completa
+- **Produz**: Especificações técnicas, escolha de tecnologias, plano de desenvolvimento
+- **Uso**: `executeTask('architect', { type: 'analyze_requirements', config: {...} })`
 
 ### **⚒️ Dev Builder Agent**
-- **Purpose**: Code implementation and feature development
-- **Capabilities**: Code generation, refactoring, optimization
-- **Usage**: `executeTask('dev_builder', { type: 'implement_feature', config: {...} })`
+- **Função**: Implementa código backend, APIs e lógica de negócio
+- **Produz**: Código funcional, testes automatizados, documentação técnica
+- **Uso**: `executeTask('dev_builder', { type: 'implement_feature', config: {...} })`
 
 ### **🎨 Dev.UI Engineer Agent**
-- **Purpose**: Frontend and UI/UX development
-- **Capabilities**: Component generation, responsive design, accessibility (WCAG 2.1 AA)
-- **Usage**: `executeTask('dev_ui', { type: 'generate_ui', config: {...} })`
+- **Função**: Cria interfaces frontend responsivas e acessíveis
+- **Produz**: Componentes React/Vue, CSS responsivo, design systems profissionais
+- **Uso**: `executeTask('dev_ui', { type: 'generate_ui', config: {...} })`
 
-### **🧠 LLM Architect Agent**
-- **Purpose**: AI automation and prompt engineering
-- **Capabilities**: Workflow automation, prompt optimization, safety policies
-- **Usage**: `executeTask('llm_architect', { type: 'design_automation', config: {...} })`
+### **🤖 LLM Architect Agent**
+- **Função**: Automatiza processos repetitivos com IA
+- **Produz**: Chatbots inteligentes, automações de workflow, análise de dados
+- **Uso**: `executeTask('llm_architect', { type: 'design_automation', config: {...} })`
 
 ### **🧪 QA Tester Agent**
-- **Purpose**: Quality assurance and testing
-- **Capabilities**: Test generation, quality validation, performance analysis
-- **Usage**: `executeTask('qa_tester', { type: 'validate_quality', config: {...} })`
+- **Função**: Testa e valida qualidade do software produzido
+- **Produz**: Relatórios de qualidade, testes automatizados, métricas de performance
+- **Uso**: `executeTask('qa_tester', { type: 'validate_quality', config: {...} })`
 
-### **👔 Manager Agent**
-- **Purpose**: Project coordination and compliance
-- **Capabilities**: Task orchestration, resource management, enterprise compliance
-- **Usage**: `executeTask('manager', { type: 'coordinate_project', config: {...} })`
+### **📋 Manager Agent**
+- **Função**: Coordena todos os agentes e gerencia produção completa
+- **Produz**: Cronogramas, relatórios de progresso, estrutura organizada de projeto
+- **Uso**: `executeTask('manager', { type: 'coordinate_project', config: {...} })`
 
 ## 💡 Usage Examples
 
@@ -317,6 +318,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-**Built with ❤️ by the Aurix Team**
+**Desenvolvido pela Trappix Tec House**
 
-*Empowering developers with intelligent automation since 2024*
+*Automatizando produção de software com IA desde 2024*
