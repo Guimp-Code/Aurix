@@ -1,0 +1,12 @@
+llm_architect:
+  owner: true
+  must_read:
+    - "context/llm_automation_standards.xml"
+    - "context/llm_references.xml"
+  outputs:
+    - "docs/backlog/LLM-*/PLAN.json"
+    - "docs/backlog/LLM-*/TICKETS.md"
+  enforce:
+    manager: block_if_noncompliant
+    qa_tester: require_all_gates_green
+    refresh_policy: monthly

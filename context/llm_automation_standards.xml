@@ -1,0 +1,26 @@
+<llmAutomationStandards>
+  <objective>Definir padrões concretos para LLMs, agentes de IA e automações dentro do Aurix.</objective>
+  <scope>Aplicável a todo agente/fluxo de automação com LLM (online/offline).</scope>
+
+  <checklist>
+    <item>Usar MCP e/ou conectores aprovados (fs, http, git, sqlite) com escopos mínimos.</item>
+    <item>Documentar prompt(s), objetivos, entradas/saídas e limites do agente.</item>
+    <item>Mitigar loops e alucinações: limites de iteração, verificações e revisão humana quando crítico.</item>
+    <item>Segurança: sem gravação fora do workspace; sem secrets em texto; SCA/secret-scan habilitados no CI.</item>
+    <item>Observabilidade: logs estruturados, IDs de correlação, contadores de falhas, tempo médio de execução.</item>
+    <item>Prontidão: rollback de artefatos, idempotência, timeouts, retries com backoff, circuit breakers (se aplicável).</item>
+  </checklist>
+
+  <policies>
+    <execution>Todos os agentes LLM devem respeitar limites de tokens/memória e operar com escrita atômica.</execution>
+    <review>Manager bloqueia release se algum item do checklist falhar.</review>
+    <offline>Fallback para modelos locais quando online indisponível; registrar qual backbone foi usado.</offline>
+  </policies>
+
+  <roles>
+    <llmArchitect>Define padrões, escolhe frameworks, modela agentes e revisa automações antes do deploy.</llmArchitect>
+    <llmDevExecutor>Implementa agentes conforme padrões; garante testes e observabilidade.</llmDevExecutor>
+    <manager>Aplica gates de compliance; orquestra rollout/rollback.</manager>
+    <qaTester>Valida testes (unit/integration), segurança básica e prontidão.</qaTester>
+  </roles>
+</llmAutomationStandards>

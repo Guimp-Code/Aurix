@@ -1,0 +1,4 @@
+PyYAML
+tenacity
+openai>=1.40,<2
+requests
