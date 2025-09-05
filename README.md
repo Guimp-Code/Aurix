@@ -305,6 +305,10 @@ await aurix.memory.setState({
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
+## 📚 **Tutorial Completo**
+
+**🎯 [Leia o Tutorial Completo](docs/TUTORIAL.md)** - Guia passo a passo para usar o Aurix 2.0
+
 ## 🆘 Support
 
 - 📖 **Documentation**: [docs/](./docs/)

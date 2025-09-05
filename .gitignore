@@ -5,3 +5,37 @@ node_modules/
 /build
 *.key
 *.secret
+
+# Arquivos sensíveis do framework
+prompt de relese/
+aurix_memory/
+test_memory/
+test_fs_storage/
+
+# Arquivos de configuração pessoal
+.cursor/
+.vscode/
+.idea/
+
+# Backups e temporários
+*.backup
+*.bak
+*.tmp
+
+# Logs e dados de desenvolvimento
+data/
+output/
+logs/
+
+# Configurações locais
+.env.local
+.env.development
+.env.production
+config.local.json
+
+# Chaves e tokens
+*.pem
+*.p12
+*.pfx
+api-keys.json
+tokens.json
