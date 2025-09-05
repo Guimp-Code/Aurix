@@ -1,3 +1,15 @@
+# Aurix
+
+## 🚀 **Sistema de Desenvolvimento Híbrido com IA**
+
+O **Aurix** é um framework avançado que combina múltiplos agentes de IA especializados com servidores MCP (Model Context Protocol) para criar um ambiente de desenvolvimento altamente produtivo e inteligente.
+
+### **1. Tecnologias Principais:**
+- **Cursor AI**: Interface principal e orquestração
+- **Ollama NITRO**: Modelo local para reforço e offline
+- **MCP Servers**: Protocolo para comunicação entre agentes
+- **Templates**: Estruturas pré-definidas para projetos
+
 ### **2. Agentes de Desenvolvimento:**
 - 🏗️ **Architect**: Análise, arquitetura e planejamento
 - 👨‍💻 **Dev Builder**: Implementação de código
